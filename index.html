@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="NEWTON: Are Language Models Capable of Physical Reasoning?">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NEWTON</title>
+<!-- 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FV4ZJ9PVSV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-FV4ZJ9PVSV');
+  </script> -->
+
+<!--   <script>
+     -->
+
+   
+
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body onload="updateSingleVideo(); updateQpredVideo();">
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+</nav>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">NEWTON: <br> Are Language Models Capable of Physical Reasoning</h1>
+          <h3 class="title is-4 conference-authors"><a target="_blank" href="https://2023.emnlp.org/">EMNLP 2023 Findings</a></h3>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><a target="_blank" href="https://www.linkedin.com/in/yi-ru-helen-wang?original_referer=https%3A%2F%2Fwww.google.com%2F/">Yi Ru Wang</a><sup>1</sup>,</span>
+            <span class="author-block"><a target="_blank" href="https://duanjiafei.com/">Jiafei Duan</a><sup>1</sup>,</span>
+            <span class="author-block"><a target="_blank" href="https://homes.cs.washington.edu/~fox/">Dieter Fox</a><sup>1, 2</sup>,</span>
+            <span class="author-block"><a target="_blank" href="https://goodrobot.ai/">Siddhartha Srinivasa</a><sup>1</sup></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Washington,</span>
+            <span class="author-block"><sup>2</sup>NVIDIA</span>
+          </div>
+
+          <span class="link-block"><a target="_blank" href="https://arxiv.org/abs/2310.07018" class="external-link button is-normal is-rounded is-dark"><span class="icon"><i class="fas fa-file"></i></span><span>ArXiv</span></a></span>
+
+          <!-- Code Link. -->
+          <span class="link-block"><a target="_blank" href="https://github.com/NewtonReasoning/Newton" class="external-link button is-normal is-rounded is-dark"><span class="icon"><i class="fab fa-github"></i></span><span>Code</span></a></span>
+          <span class="link-block">
+          <a target="_blank" href="https://huggingface.co/datasets/NEWTONReasoning/NEWTON/viewer/default/confident_questions?fbclid=IwAR23871OjV50d2tPBGnAKgmFljoAR78GwSIlcSPXd60h0jFjdKhBGb_IlIA" class="external-link button is-normal is-rounded is-dark">
+            <span class="icon">
+              <i class="fas fa-database" aria-hidden="true"></i>
+            </span>
+            <span>Dataset</span>
+          </a>
+        </span>
+          <br><br>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-fullhd">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-vcentered is-centered">
+          <br>
+          <video id="teaser" autoplay muted loop height="100%">
+            <source src="media/demo.mp4" type="video/mp4">
+          </video>
+        </div>
+        <h2 class="subtitle has-text-centered">
+          <span class="dperact">NEWTON</span> is a <b>Repository</b>, <b>Pipeline</b>, and <b>Benchmark</b> designed to evaluate the physical reasoning capability of LLMs
+        </h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay muted loop height="100%">
+            <source src="media/intro/v2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay muted loop height="100%">
+            <source src="media/intro/v9.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+         <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay muted loop height="100%">
+            <source src="media/intro/v6.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay muted loop height="100%">
+            <source src="media/intro/a3.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay muted loop height="100%">
+            <source src="media/intro/a2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay muted loop height="100%">
+            <source src="media/intro/v5.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay muted loop height="100%">
+            <source src="media/intro/a1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+       <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay muted loop height="100%">
+            <source src="media/intro/a4.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+         <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay muted loop height="100%">
+            <source src="media/intro/a5.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<h2 class="subtitle has-text-centered">
+</br>
+  We use <b>AR2-D2</b> to collect robot demonstrations cross three manipulation tasks (<em>press</em>, <em>pick-up</em> and <em>push</em>) on <b>9</b> personalized objects. </br>These personalized objects are uniquely <b>shaped, sized, or textured items designed to meet the specific needs or functionalities</b> of individual users within their personalized environments.
+</h2>
+<br>
+ -->
+
+
+<!-- <section class="hero teaser">
+  <div class="container is-fullhd">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-vcentered  is-centered">
+          <video id="teaser" autoplay muted loop height="100%">
+            <source src="media/intro/ARDemo.mp4"
+                    type="video/mp4">
+          </video>
+          </br>
+        </div>
+        <br>
+        <h2 class="subtitle has-text-centered">
+        <span class="dperact">AR2-D2's</span> demonstrations collection interface via an iPhone/iPad. 
+        </h2>
+      </div>
+    </div>
+  </div>
+</section> -->
+                             
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          </br>
+          <img src="media/9.png" class="interpolation-image" 
+           alt="Interpolate start reference image." />
+          </br>
+          <br/>
+          <p>
+            Training language models on extensive unprocessed text data has yielded impressive advancements in natural language processing (NLP), particularly in tasks such as question answering and reading comprehension. These models, through their contextualized representations, have been proven in numerous studies to encapsulate syntactic, semantic, word sense, and common-sense knowledge. However, there has been limited exploration of their physical reasoning abilities, specifically concerning the crucial attributes for comprehending everyday objects. To address this gap, we introduce NEWTON dataset, a comprehensive Repository, Pipeline, and Benchmark designed to facilitate streamlined evaluation of Large Language Models (LLMs) in the context of physical reasoning. The dataset Repository comprises a vast collection of object-attribute pairs, providing the foundation for generating infinite-scale assessment templates when combined with the NEWTON Pipeline. Leveraging this infrastructure, we construct a large-scale QA dataset to investigate the physical reasoning capabilities of several mainstream language models across foundational, explicit, and implicit reasoning tasks.
+          </p>
+          <p>
+            Through extensive empirical analysis, our results highlight the capabilities of LLMs for physical reasoning. Furthermore, the NEWTON platform demonstrates its potential for evaluating and enhancing language models, paving the way for their integration into physically grounded settings.
+          </p>
+        </div>
+      </div>
+    </div>
+    <br>
+   
+    <!--/ Abstract. -->
+
+  </div>
+
+
+</section>
+
+<section class="section">
+  <div class="container is-max-widescreen">
+
+    <div class="rows">
+
+<style>
+  .centered-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .interpolation-image {
+    display: block;
+    margin: 20px 0;  /* Give some space above and below the image */
+  }
+</style>
+
+<section>
+  <div class="rows is-centered">
+    <div class="row is-full-width centered-container">
+      <h2 class="title is-3"><span class="dperact">NEWTON</span></h2>
+      <h3 class="title is-4">A novel Repository</h3>
+      <p>
+        NEWTON Repository, includes the identification and shortlist of objects and attributes, and obtaining a set of consistent object-attribute annotations.
+      </p>
+      <img src="media/2.png" class="interpolation-image" alt="Interpolate start reference image." />
+      <p>Templates for generating the three different tracks of QA.</p>
+      <img src="media/4.png" class="interpolation-image" alt="Interpolate start reference image." />
+      <p>Comparison of NEWTON with other dataset.</p>
+      <img src="media/compare.png" class="interpolation-image" alt="Interpolate start reference image." />
+      <h2 class="title is-3">Results</h2>
+      <p>Results for <b>Track 1</b></p>
+      <img src="media/5.png" class="interpolation-image" alt="Interpolate start reference image." />
+      <p>Results for <b>Track 2</b></p>
+      <img src="media/6.png" class="interpolation-image" alt="Interpolate start reference image." />
+      <p>Results for <b>Track 3</b></p>
+      <img src="media/7.png" class="interpolation-image" alt="Interpolate start reference image." />
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section class="section">
+  <div class="container is-max-widescreen">
+
+    <div class="rows">
+      <h2 class="title is-3 centered-text">Ablation Studies</h2>
+      <p class="centered-text">We provide an analysis of the NEWTON dataset, focusing on potential ways of leveraging \dataset to enhance model performance in a physical reasoning context, and examining the consistency of LLMs with regard to model size, question polarity, and answer positioning. </p>
+          <img src="media/8.png" class="interpolation-image" 
+           alt="Interpolate start reference image." />
+          </br> 
+            
+          
+        <br/>
+
+      
+
+      
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-widescreen content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{wang2023newton,
+  title     = {NEWTON: Are Large Language Models Capable of Physical Reasoning?}, 
+  author    = {Wang, Yi Ru and Duan, Jiafei and Fox, Dieter and Srinivasa, Siddhartha,
+  booktitle = {arXiv preprint arXiv:2310.07018},
+  year      = {2023},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content has-text-centered">
+          <p>
+            This website template borrowed from NeRFies made by the amazing Keunhong Park.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>
