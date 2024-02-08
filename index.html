@@ -100,7 +100,7 @@ Tactile-Vision-Language Models">
       <div class="container">
         <div class="columns is-vcentered is-centered">
           <br>
-          <img src="media/Untitled1080p79-ezgif.com-video-to-gif-converter.gif" class="interpolation-image" alt="Interpolate start reference image." width="1920" height="1080" />
+          <img src="media/Untitled1080p79-ezgif.com-video-to-gif-converter.gif" class="interpolation-image" alt="Interpolate start reference image." width="960" height="540" />
 
         </div>
         <h2 class="subtitle has-text-centered">
@@ -216,17 +216,14 @@ Tactile-Vision-Language Models">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          </br>
+<!--           </br>
           <img src="media/9.png" class="interpolation-image" 
            alt="Interpolate start reference image." />
-          </br>
+          </br> -->
           <br/>
           <p>
-            Training language models on extensive unprocessed text data has yielded impressive advancements in natural language processing (NLP), particularly in tasks such as question answering and reading comprehension. These models, through their contextualized representations, have been proven in numerous studies to encapsulate syntactic, semantic, word sense, and common-sense knowledge. However, there has been limited exploration of their physical reasoning abilities, specifically concerning the crucial attributes for comprehending everyday objects. To address this gap, we introduce NEWTON dataset, a comprehensive Repository, Pipeline, and Benchmark designed to facilitate streamlined evaluation of Large Language Models (LLMs) in the context of physical reasoning. The dataset Repository comprises a vast collection of object-attribute pairs, providing the foundation for generating infinite-scale assessment templates when combined with the NEWTON Pipeline. Leveraging this infrastructure, we construct a large-scale QA dataset to investigate the physical reasoning capabilities of several mainstream language models across foundational, explicit, and implicit reasoning tasks.
           </p>
-          <p>
-            Through extensive empirical analysis, our results highlight the capabilities of LLMs for physical reasoning. Furthermore, the NEWTON platform demonstrates its potential for evaluating and enhancing language models, paving the way for their integration into physically grounded settings.
-          </p>
+          Physical reasoning is essential for safe and efficient AI systems in robotic manipulation. To ensure that the system’s physical understanding of the object properties is grounded in its existing physical reality, computer vision is insufficient. Recent work in physical reasoning focuses on vision-language inputs without the use of tactile inputs, with language serving as a powerful tool for abstraction and communication of additional contexts. While these works have demonstrated success in diverse forms of physical reasoning, they focus on physical properties that can be effectively deciphered from visual inputs and language without any interaction. In addition, systems that are built specifically for robotic manipulation either perform ineffectively in visually ambiguous scenarios with only vision-language inputs or focus on simplified scenarios. In this work, we first define a set of physical properties that are both useful and decipherable from our choice of tactile sensor, GelSight, and introduce Feelang, a tactile video dataset annotated using the physical properties. We then introduce Octopi, an end-to-end system that leverages both tactile representation learning and large vision-language models to predict and reason about vision-based tactile inputs with minimal language fine-tuning. We construct an evaluation suite spanning five problems to evaluate our system's learned tactile representations and physical reasoning holistically. Our experiments show that Octopi is able to effectively use intermediate physical property prediction to improve physical reasoning robustness and improve performance on robotic tasks when there is visual ambiguity.
         </div>
       </div>
     </div>
