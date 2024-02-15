@@ -271,6 +271,7 @@ Tactile-Vision-Language Models">
       <h3 class="title is-4">Model architecture</h3>
       <img src="media/model.png" class="interpolation-image" alt="Interpolate start reference image." />
       <p> The Octopi framework comprises three trained components: 1) tactile input encoder, 2) projection module, and 3) LLM, following prior LVLM work that take videos as inputs. Firstly, prior LVLM work leverage the strengths of powerful pre-trained vision models, specifically CLIP's visual encoder, to extract useful feature representations. We follow prior work and use the pre-trained CLIP visual encoder ViT-L/14 as the base model of our tactile encoder. A projection module is present in existing work to project the encoder's output representations into embeddings with the same dimensionality as the LLM's word embeddings. This projection module is generally simple and comprises one or two trainable layers. For our projection module, we follow LLaVA's projection module and use two linear layers along with an intermediate GELU activation. Finally, the LLM forms the language understanding component of Octopi. LLM performance depends heavily on the datasets that they are pre-trained on. We use the open-source LLaMA-based LLM, Vicuna due to its dialogue capabilities. </p>
+    </br>
       <h2 class="title is-3">Results</h2>
       <!-- Added inline styling for width and height -->
       <img src="media/result_all.png" class="interpolation-image" style="width:100%; height:auto;" alt="Interpolate start reference image." />
@@ -281,6 +282,7 @@ Tactile-Vision-Language Models">
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
+      <h2 class="title is-3">Example tactile images from Feelang dataset</h2>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-steve">
           <!-- Replace video with an image -->
