@@ -272,9 +272,54 @@ Tactile-Vision-Language Models">
       <img src="media/model.png" class="interpolation-image" alt="Interpolate start reference image." />
       <p> The Octopi framework comprises three trained components: 1) tactile input encoder, 2) projection module, and 3) LLM, following prior LVLM work that take videos as inputs. Firstly, prior LVLM work leverage the strengths of powerful pre-trained vision models, specifically CLIP's visual encoder, to extract useful feature representations. We follow prior work and use the pre-trained CLIP visual encoder ViT-L/14 as the base model of our tactile encoder. A projection module is present in existing work to project the encoder's output representations into embeddings with the same dimensionality as the LLM's word embeddings. This projection module is generally simple and comprises one or two trainable layers. For our projection module, we follow LLaVA's projection module and use two linear layers along with an intermediate GELU activation. Finally, the LLM forms the language understanding component of Octopi. LLM performance depends heavily on the datasets that they are pre-trained on. We use the open-source LLaMA-based LLM, Vicuna due to its dialogue capabilities. </p>
       <h2 class="title is-3">Results</h2>
-      <p>Results for <b>Track 1</b></p>
       <!-- Added inline styling for width and height -->
       <img src="media/result_all.png" class="interpolation-image" style="width:100%; height:auto;" alt="Interpolate start reference image." />
+    </div>
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <!-- Replace video with an image -->
+          <img src="media/basket.jpg" id="steve" style="height:100%;" alt="Hand Sanitization">
+        </div>
+        <div class="item item-fullbody">
+          <!-- Replace video with an image -->
+          <img src="media/clothes_peg.jpg" id="fullbody" style="height:100%;" alt="Food Bin">
+        </div>
+        <div class="item item-shiba">
+          <!-- Replace video with an image -->
+          <img src="media/egg.jpg" id="shiba" style="height:100%;" alt="Drawer">
+        </div>
+        <div class="item item-blueshirt">
+          <!-- Replace video with an image -->
+          <img src="media/gauze_pad.jpg" id="blueshirt" style="height:100%;" alt="Marker">
+        </div>
+        <!-- Assuming each item has a unique image now, removed additional "shiba" items for brevity -->
+        <div class="item item-chair-tp">
+          <!-- Replace video with an image -->
+          <img src="media/hairbrush_bristles_side.jpg" id="chair-tp" style="height:100%;" alt="Blocks">
+        </div>
+        <div class="item item-blueshirt">
+          <!-- Replace video with an image -->
+          <img src="media/insulating_holder.jpg" id="blueshirt" style="height:100%;" alt="Marker">
+        </div>
+        <div class="item item-blueshirt">
+          <!-- Replace video with an image -->
+          <img src="media/potato.jpg" id="blueshirt" style="height:100%;" alt="Marker">
+        </div>
+        <div class="item item-blueshirt">
+          <!-- Replace video with an image -->
+          <img src="media/unripe_avocado.jpg" id="blueshirt" style="height:100%;" alt="Marker">
+        </div>
+        <div class="item item-blueshirt">
+          <!-- Replace video with an image -->
+          <img src="media/tsa_lock_numbers.jpg" id="blueshirt" style="height:100%;" alt="Marker">
+        </div>
+      </div>
     </div>
   </div>
 </section>
