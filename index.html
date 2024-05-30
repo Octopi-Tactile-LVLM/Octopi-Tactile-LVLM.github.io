@@ -61,7 +61,7 @@ Tactile-Vision-Language Models">
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">
-            <img src="media/emoji (5).png" alt="Emoji" style="width: 40px; height: 40px; vertical-align: middle;">Octopi: <br> Object Property Reasoning with Large Tactile-Vision-Language Models
+            <img src="media/emoji (5).png" alt="Emoji" style="width: 40px; height: 40px; vertical-align: middle;">Octopi: <br> Object Property Reasoning with Large Tactile-Language Models
           </h1>
           <h3 class="title is-4 conference-authors"><a target="_blank" href="https://roboticsconference.org//">RSS 2024</a></h3>
           <div class="is-size-5 publication-authors">
@@ -80,15 +80,15 @@ Tactile-Vision-Language Models">
           <span class="link-block"><a target="_blank" href="https://arxiv.org/abs/2405.02794" class="external-link button is-normal is-rounded is-dark"><span class="icon"><i class="fas fa-file"></i></span><span>ArXiv</span></a></span>
 
           <!-- Code Link. -->
-          <span class="link-block"><a target="_blank" href="https://github.com/clear-nus/octopi" class="external-link button is-normal is-rounded is-dark"><span class="icon"><i class="fab fa-github"></i></span><span>Code</span></a></span>
-          <span class="link-block">
-          <a target="_blank" href="https://octopi-tactile-lvlm.github.io/" class="external-link button is-normal is-rounded is-dark">
+          <span class="link-block"><a target="_blank" href="https://github.com/clear-nus/octopi" class="external-link button is-normal is-rounded is-dark"><span class="icon"><i class="fab fa-github"></i></span><span>Code & Dataset</span></a></span>
+          <!-- <span class="link-block"> -->
+          <!-- <a target="_blank" href="https://octopi-tactile-lvlm.github.io/" class="external-link button is-normal is-rounded is-dark">
             <span class="icon">
               <i class="fas fa-database" aria-hidden="true"></i>
             </span>
             <span>Dataset</span>
-          </a>
-        </span>
+          </a> -->
+        <!-- </span> -->
           <br><br>
         </div>
       </div>
@@ -225,7 +225,7 @@ Tactile-Vision-Language Models">
           <br/>
           <p>
           </p>
-          Physical reasoning is essential for safe and efficient AI systems in robotic manipulation. To ensure that the system’s physical understanding of the object properties is grounded in its existing physical reality, computer vision is insufficient. Recent work in physical reasoning focuses on vision-language inputs without the use of tactile inputs, with language serving as a powerful tool for abstraction and communication of additional contexts. While these works have demonstrated success in diverse forms of physical reasoning, they focus on physical properties that can be effectively deciphered from visual inputs and language without any interaction. In addition, systems that are built specifically for robotic manipulation either perform ineffectively in visually ambiguous scenarios with only vision-language inputs or focus on simplified scenarios. In this work, we first define a set of physical properties that are both useful and decipherable from our choice of tactile sensor, GelSight, and introduce Feelang, a tactile video dataset annotated using the physical properties. We then introduce Octopi, an end-to-end system that leverages both tactile representation learning and large vision-language models to predict and reason about vision-based tactile inputs with minimal language fine-tuning. We construct an evaluation suite spanning five problems to evaluate our system's learned tactile representations and physical reasoning holistically. Our experiments show that Octopi is able to effectively use intermediate physical property prediction to improve physical reasoning robustness and improve performance on robotic tasks when there is visual ambiguity.
+          Physical reasoning is essential for safe and efficient AI systems in robotic manipulation. To ensure that the system’s physical understanding of the object properties is grounded in its existing physical reality, computer vision is insufficient. Recent work in physical reasoning focuses on vision-language inputs without the use of tactile inputs, with language serving as a powerful tool for abstraction and communication of additional contexts. While these works have demonstrated success in diverse forms of physical reasoning, they focus on physical properties that can be effectively deciphered from visual inputs and language without any interaction. In addition, systems that are built specifically for robotic manipulation either perform ineffectively in visually ambiguous scenarios with only vision-language inputs or focus on simplified scenarios. In this work, we first define a set of physical properties that are both useful and decipherable from our choice of tactile sensor, GelSight, and introduce PhysiCLeAR, a tactile video dataset annotated using the physical properties. We then introduce Octopi, an end-to-end system that leverages both tactile representation learning and large vision-language models to predict and reason about vision-based tactile inputs with minimal language fine-tuning. We construct an evaluation suite spanning five problems to evaluate our system's learned tactile representations and physical reasoning holistically. Our experiments show that Octopi is able to effectively use intermediate physical property prediction to improve physical reasoning robustness and improve performance on robotic tasks when there is visual ambiguity.
         </div>
       </div>
     </div>
@@ -283,7 +283,7 @@ Tactile-Vision-Language Models">
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Example tactile images from Feelang dataset</h2>
+      <h2 class="title is-3">Example tactile images from PhysiCLeAR dataset</h2>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-steve">
           <!-- Replace video with an image -->
