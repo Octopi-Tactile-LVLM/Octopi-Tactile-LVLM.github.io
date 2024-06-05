@@ -141,9 +141,10 @@
         <div class="columns is-vcentered is-centered">
           <img src="media/items.png" class="interpolation-image" alt="Dataset items." width="640" height="360" />
         </div>
+        <br>
         <h4 class="title is-4">Dataset Characteristics</h4>
         <div class="columns is-vcentered is-centered">
-          <img src="media/dataset.png" class="interpolation-image" alt="Dataset features." width="960" height="540" />
+          <img src="media/dataset.png" class="interpolation-image" alt="Dataset features." width="800" height="450" />
         </div>
       </div>
     </div>
@@ -152,42 +153,41 @@
       <h4 class="title is-4">Example Tactile Images</h4>
     </div>
     <div id="results-carousel" class="carousel results-carousel">
-      <div class="item item-steve">
+      <div class="item item-basket">
         <!-- Replace video with an image -->
-        <img src="media/tactile_images/basket.jpg" id="steve" style="height:100%;" alt="Hand Sanitization">
+        <img src="media/tactile_images/basket.jpg" id="basket" style="height:80%;" alt="Basket.">
       </div>
-      <div class="item item-fullbody">
+      <div class="item item-clothes-peg">
         <!-- Replace video with an image -->
-        <img src="media/tactile_images/clothes_peg.jpg" id="fullbody" style="height:100%;" alt="Food Bin">
+        <img src="media/tactile_images/clothes_peg.jpg" id="clothes-peg" style="height:80%;" alt="Clothes peg.">
       </div>
-      <div class="item item-shiba">
+      <div class="item item-egg">
         <!-- Replace video with an image -->
-        <img src="media/tactile_images/egg.jpg" id="shiba" style="height:100%;" alt="Drawer">
+        <img src="media/tactile_images/egg.jpg" id="egg" style="height:80%;" alt="Egg.">
       </div>
-      <div class="item item-blueshirt">
+      <div class="item item-gauze-pad">
         <!-- Replace video with an image -->
-        <img src="media/tactile_images/gauze_pad.jpg" id="blueshirt" style="height:100%;" alt="Marker">
+        <img src="media/tactile_images/gauze_pad.jpg" id="gauze-pad" style="height:80%;" alt="Gauze pad.">
       </div>
-      <!-- Assuming each item has a unique image now, removed additional "shiba" items for brevity -->
-      <div class="item item-chair-tp">
+      <div class="item item-hairbrush-bristles-side">
         <!-- Replace video with an image -->
-        <img src="media/tactile_images/hairbrush_bristles_side.jpg" id="chair-tp" style="height:100%;" alt="Blocks">
+        <img src="media/tactile_images/hairbrush_bristles_side.jpg" id="hairbrush-bristles-side" style="height:80%;" alt="Hairbrush bristles side.">
       </div>
-      <div class="item item-blueshirt">
+      <div class="item item-insulating-holder">
         <!-- Replace video with an image -->
-        <img src="media/tactile_images/insulating_holder.jpg" id="blueshirt" style="height:100%;" alt="Marker">
+        <img src="media/tactile_images/insulating_holder.jpg" id="insulating-holder" style="height:80%;" alt="Insulating holder.">
       </div>
-      <div class="item item-blueshirt">
+      <div class="item item-potato">
         <!-- Replace video with an image -->
-        <img src="media/tactile_images/potato.jpg" id="blueshirt" style="height:100%;" alt="Marker">
+        <img src="media/tactile_images/potato.jpg" id="potato" style="height:80%;" alt="Potato.">
       </div>
-      <div class="item item-blueshirt">
+      <div class="item item-unripe-avocado">
         <!-- Replace video with an image -->
-        <img src="media/tactile_images/unripe_avocado.jpg" id="blueshirt" style="height:100%;" alt="Marker">
+        <img src="media/tactile_images/unripe_avocado.jpg" id="unripe-avocado" style="height:80%;" alt="Unripe avocado.">
       </div>
-      <div class="item item-blueshirt">
+      <div class="item item-tsa-lock-numbers">
         <!-- Replace video with an image -->
-        <img src="media/tactile_images/tsa_lock_numbers.jpg" id="blueshirt" style="height:100%;" alt="Marker">
+        <img src="media/tactile_images/tsa_lock_numbers.jpg" id="tsa-lock-numbers" style="height:80%;" alt="TSA lock numbers.">
       </div>
     </div>
     <br>
@@ -207,7 +207,7 @@
             <p> The Octopi framework comprises three trained components: 1) tactile input encoder, 2) projection module, and 3) LLM, following prior LVLM work that take videos as inputs. Firstly, prior LVLM work leverage the strengths of powerful pre-trained vision models, specifically CLIP's visual encoder, to extract useful feature representations. We follow prior work and use the pre-trained CLIP visual encoder ViT-L/14 as the base model of our tactile encoder. A projection module is present in existing work to project the encoder's output representations into embeddings with the same dimensionality as the LLM's word embeddings. This projection module is generally simple and comprises one or two trainable layers. For our projection module, we follow LLaVA's projection module and use two linear layers along with an intermediate GELU activation. Finally, the LLM forms the language understanding component of Octopi. LLM performance depends heavily on the datasets that they are pre-trained on. We use the open-source LLaMA-based LLM, Vicuna due to its dialogue capabilities. </p>
           </div>
           <div class="columns is-vcentered is-centered">
-            <img src="media/model.png" class="interpolation-image" alt="Model diagram." width="640" height="360" />
+            <img src="media/model.png" class="interpolation-image" alt="Model diagram." width="800" height="450" />
           </div>
         </div>
       </div>
