@@ -107,10 +107,15 @@
             We introduce <b>PhysiCLeAR</b>, a new dataset containing 408 GelSight tactile videos of 74 everyday household objects. The videos are collected by hand
             with two exploratory procedures, pressing and rotation, and annotated for three useful physical properties: <em>hardness</em>,
             <em>roughness</em> and <em>bumpiness</em>. PhysiCLeAR leverages the videos and annotations to create five language-driven physical description and understanding
-            tasks. We train and evaluate <b>Octopi</b>, a large VLM, on PhysiCLeAR for tactile-grounded physical understanding and scenario reasoning. Our experiments show that Octopi is able to predict physical properties from the tactile videos accurately and use the physical properties to reason about and resolve scenarios.
+            tasks. We train and evaluate <b>Octopi</b>, a large VLM, on PhysiCLeAR for tactile-grounded physical understanding and scenario reasoning.
             </p>
           </div>
           <img src="media/pipeline.png" class="interpolation-image" alt="Model pipeline." />
+          <div class="content has-text-justified">
+            <p>
+            Our experiments show that Octopi is able to predict physical properties from the tactile videos accurately and use the physical properties to reason about and resolve scenarios.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -223,10 +228,10 @@
         <h4 class="title is-4 centered-text">Scenario Reasoning Examples</h4>
         <p class="centered-text">We showcase two different dialogue scenarios that Octopi is capable of. First being food state reasoning, and second being objet part reasoning. </p>
         <div class="columns is-vcentered is-centered">
-          <div style="width: 600px; float: left;">
+          <div style="width:50%; float: left;">
             <img src="media/scenario_reasoning/rice.png" class="interpolation-image" style="width:100%; height:auto;" alt="Rice reasoning interaction." />
           </div>
-          <div style="margin-left: 620px;">
+          <div style="width:50%; float: right;">
             <img src="media/scenario_reasoning/part.png" class="interpolation-image" style="width:100%; height:auto;" alt="Toothbrush part reasoning interaction." />
           </div>
         </div>
