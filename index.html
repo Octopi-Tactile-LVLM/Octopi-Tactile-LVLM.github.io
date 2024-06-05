@@ -195,7 +195,6 @@
         <div class="row is-full-width centered-container">
           <br>
           <h3 class="title is-3">Octopi: Tactile VLM</h3>
-          <!-- <img src="media/model.png" class="interpolation-image" alt="Model diagram." /> -->
           <div class="content has-text-justified">
             <p> The Octopi framework comprises three trained components: 1) tactile input encoder, 2) projection module, and 3) LLM, following prior LVLM work that take videos as inputs. Firstly, prior LVLM work leverage the strengths of powerful pre-trained vision models, specifically CLIP's visual encoder, to extract useful feature representations. We follow prior work and use the pre-trained CLIP visual encoder ViT-L/14 as the base model of our tactile encoder. A projection module is present in existing work to project the encoder's output representations into embeddings with the same dimensionality as the LLM's word embeddings. This projection module is generally simple and comprises one or two trainable layers. For our projection module, we follow LLaVA's projection module and use two linear layers along with an intermediate GELU activation. Finally, the LLM forms the language understanding component of Octopi. LLM performance depends heavily on the datasets that they are pre-trained on. We use the open-source LLaMA-based LLM, Vicuna due to its dialogue capabilities. </p>
           </div>
@@ -210,28 +209,22 @@
 </section>
 
 
-<!-- Results -->
+<!-- Results and scenario reasoning -->
 <section class="section">
-  <div class="container is-max-widescreen">
-    <div class="rows">
-      <h2 class="title is-3">Results</h2>
-      <img src="media/results.png" class="interpolation-image" style="width:60%; height:auto;" alt="Interpolate start reference image." />
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="rows">
+        <br>
+        <h3 class="title is-3">Results</h3>
+        <img src="media/results.png" class="interpolation-image" style="width:60%; height:auto;" alt="Overall results." />
+        <br>
+        <h4 class="title is-4 centered-text">Scenario Reasoning Examples</h4>
+        <p class="centered-text">We showcase two different dialogue scenarios that Octopi is capable of. First being food state reasoning, and second being objet part reasoning. </p>
+        <img src="media/scenario_reasoning/rice.png" class="interpolation-image" style="width:80%; height:auto;" alt="Interpolate start reference image." />
+        <br>
+        <img src="media/scenario_reasoning/part.png" class="interpolation-image" style="width:80%; height:auto;" alt="Interpolate start reference image." />
+      </div>
     </div>
-  </div>
-</section>
-
-
-<!-- Scenario reasoning -->
-<section class="section">
-  <div class="container is-max-widescreen">
-    <div class="rows">
-      <h2 class="title is-3 centered-text">Scenario Reasoning Examples</h2>
-      <p class="centered-text">We showcase two different dialogue scenarios that Octopi is capable of. First being food state reasoning, and second being objet part reasoning. </p>
-      <img src="media/scenario_reasoning/rice.png" class="interpolation-image" style="width:80%; height:auto;" alt="Interpolate start reference image." />
-      <br>
-      <img src="media/scenario_reasoning/part.png" class="interpolation-image" style="width:80%; height:auto;" alt="Interpolate start reference image." />
-    </div>
-    <br>
   </div>
 </section>
 
