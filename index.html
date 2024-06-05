@@ -82,7 +82,7 @@
 <section class="hero teaser">
   <div class="container is-fullhd">
         <h2 class="subtitle has-text-centered">
-          <b>Summary</b>: VLM physical property prediction and scenario reasoning with GelSight tactile videos.
+          <b>Summary</b>: Large VLM physical property prediction and scenario reasoning with GelSight tactile videos.
         </h2>
         <br>
         <div class="columns is-vcentered is-centered">
@@ -107,7 +107,10 @@
           <div class="content has-text-justified">
             <br>
             <p>
-            Physical reasoning is essential for safe and efficient AI systems in robotic manipulation. To ensure that the system’s physical understanding of the object properties is grounded in its existing physical reality, computer vision is insufficient. In this work, we first define a set of physical properties that are both useful and decipherable from our choice of tactile sensor, GelSight, and introduce PhysiCLeAR, a tactile video dataset annotated using the physical properties. We then introduce Octopi, an end-to-end system that leverages both tactile representation learning and large vision-language models to predict and reason about vision-based tactile inputs with minimal language fine-tuning. We construct an evaluation suite spanning five problems to evaluate our system's learned tactile representations and physical reasoning holistically. Our experiments show that Octopi is able to effectively use intermediate physical property prediction to improve physical reasoning robustness and improve performance on robotic tasks when there is visual ambiguity.
+            We introduce <b>PhysiCLeAR</b>, a new dataset containing GelSight tactile videos of 74 everyday household objects. The videos are collected by hand
+            with two exploratory procedures, pressing and rotation, and annotated for three physical properties: hardness,
+            roughness and bumpiness. PhysiCLeAR leverages the videos and annotations to create five language-driven physical description and understanding
+            tasks. We train and evaluate <b>Octopi</b>, a large VLM, on PhysiCLeAR for tactile-grounded physical understanding and scenario reasoning.
             </p>
           </div>
         </div>
@@ -127,13 +130,15 @@
         <h3 class="title is-3">PhysiCLeAR: Tactile Dataset</h3>
         <div class="content has-text-justified">
           <p>
-            To facilitate the grounding of our physical reasoning on tactile inputs, we collected a tactile dataset of 74 everyday objects, totalling 408 tactile videos. These objects were selected to span across our three selected properties, with variations across object types and materials.
+            A new GelSight tactile dataset with property diversity, object diversity, and material diversity for three useful physical properties: hardness, roughness and bumpiness.
+            of 74 everyday objects, totalling 408 tactile videos. These objects were selected to span across our three selected properties, with variations across object types and materials.
           </p>
         </div>
       </div>
     </div>
     <img src="media/dataset.png" class="interpolation-image" alt="Dataset features." />
     <img src="media/items.png" class="interpolation-image" alt="Dataset Items." />
+    <br>
     <div class="columns is-centered has-text-centered">
       <h4 class="title is-4">Example Tactile Images</h4>
     </div>
