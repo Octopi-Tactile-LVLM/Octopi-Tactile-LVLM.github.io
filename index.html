@@ -207,7 +207,7 @@
           <br>
           <h3 class="title is-3">Octopi: Tactile VLM</h3>
           <div class="content has-text-justified">
-            <p> Octopi comprises three trained components: 1) tactile input encoder, 2) projection module, and 3) LLM, following prior LVLM models. We use the CLIP (ViT-L/14) visual encoder to extract feature representations from input tactile videos. The encoder's output is then mapped to the LLM's word embedding space using a projection module (two linear layers). Finally, the LLM forms the language understanding component of Octopi. We use the open-source LLaMA-based LLM, Vicuna, recognized for its dialogue capabilities.</p>
+            <p> Octopi comprises three trained components: 1) tactile input encoder, 2) projection module, and 3) LLM, similar to prior LVLM models. We use the CLIP (ViT-L/14) visual encoder to extract feature representations from input tactile videos. The encoder's output is then mapped to the LLM's word embedding space using a projection module (two linear layers). Finally, the LLM forms the language understanding component of Octopi. We use the open-source LLaMA-based LLM, Vicuna v1.5, recognized for its dialogue capabilities. Language embeddings are derived through tokenization and then Vicuna's word embedding layer, with <tact_start> and <tact_end> being newly trained word embeddings indicating the start and end of a tactile frame sequence from a single tactile sensor.</p>
           </div>
           <div class="columns is-vcentered is-centered">
             <img src="media/model.png" class="interpolation-image" alt="Model diagram." width="800" height="450" />
