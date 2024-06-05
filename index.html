@@ -142,7 +142,7 @@
           <img src="media/items.png" class="interpolation-image" alt="Dataset items." width="640" height="360" />
         </div>
         <br>
-        <h4 class="title is-4">Dataset Characteristics</h4>
+        <h4 class="title is-4">Dataset Features</h4>
         <div class="columns is-vcentered is-centered">
           <img src="media/dataset.png" class="interpolation-image" alt="Dataset features." width="800" height="450" />
         </div>
@@ -156,6 +156,7 @@
       <div class="item item-basket">
         <!-- Replace video with an image -->
         <img src="media/tactile_images/basket.jpg" id="basket" style="height:80%;" alt="Basket.">
+        <div class="columns is-centered has-text-centered">Basket</div>
       </div>
       <div class="item item-clothes-peg">
         <!-- Replace video with an image -->
@@ -204,7 +205,7 @@
           <br>
           <h3 class="title is-3">Octopi: Tactile VLM</h3>
           <div class="content has-text-justified">
-            <p> The Octopi framework comprises three trained components: 1) tactile input encoder, 2) projection module, and 3) LLM, following prior LVLM work that take videos as inputs. Firstly, prior LVLM work leverage the strengths of powerful pre-trained vision models, specifically CLIP's visual encoder, to extract useful feature representations. We follow prior work and use the pre-trained CLIP visual encoder ViT-L/14 as the base model of our tactile encoder. A projection module is present in existing work to project the encoder's output representations into embeddings with the same dimensionality as the LLM's word embeddings. This projection module is generally simple and comprises one or two trainable layers. For our projection module, we follow LLaVA's projection module and use two linear layers along with an intermediate GELU activation. Finally, the LLM forms the language understanding component of Octopi. LLM performance depends heavily on the datasets that they are pre-trained on. We use the open-source LLaMA-based LLM, Vicuna due to its dialogue capabilities. </p>
+            <p> Octopi comprises three trained components: 1) tactile input encoder, 2) projection module, and 3) LLM, following prior LVLM work that take videos as inputs. Firstly, we follow prior work and use the pre-trained CLIP visual encoder ViT-L/14 to extract useful representations. A projection module is present in existing work to project the encoder's output representations into embeddings with the same dimensionality as the LLM's word embeddings. For our projection module, we follow LLaVA's projection module and use two linear layers along with an intermediate GELU activation. Finally, the LLM forms the language understanding component of Octopi. LLM performance depends heavily on the datasets that they are pre-trained on. We use the open-source LLaMA-based LLM, Vicuna due to its dialogue capabilities. </p>
           </div>
           <div class="columns is-vcentered is-centered">
             <img src="media/model.png" class="interpolation-image" alt="Model diagram." width="800" height="450" />
