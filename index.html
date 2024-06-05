@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Octopi: Object Property Reasoning with Large Tactile-Vision-Language Models">
+        content="Octopi: Object Property Reasoning with Large Tactile-Language Models">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Octopi: Object Property Reasoning with Large Tactile-Language Models</title>   
 
@@ -103,7 +103,7 @@
 
 
 
-<section class="section">
+<!-- <section class="section">
   <div class="container is-max-widescreen">
 
     <div class="rows">
@@ -120,10 +120,10 @@
     display: block;
     margin: 20px 0;  /* Give some space above and below the image */
   }
-</style>
+</style> -->
 
 
-
+<!-- PhysiCLeAR -->
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
@@ -172,11 +172,11 @@
 </section>
 
 
+<!-- Octopi -->
 <section>
   <div class="rows is-centered">
     <div class="row is-full-width centered-container">
       <h2 class="title is-3"><span class="dperact">Octopi</span></h2>
-      <h3 class="title is-4">The first tactile VLVM</h3>
       <p>
         To facilitate the grounding of our physical reasoning on tactile inputs, we collected a tactile dataset of 74 everyday objects, totalling 408 tactile videos. These objects were selected to span across our three selected properties, with variations across object types and materials.
       </p>
@@ -188,42 +188,40 @@
       <img src="media/model.png" class="interpolation-image" alt="Interpolate start reference image." />
       <p> The Octopi framework comprises three trained components: 1) tactile input encoder, 2) projection module, and 3) LLM, following prior LVLM work that take videos as inputs. Firstly, prior LVLM work leverage the strengths of powerful pre-trained vision models, specifically CLIP's visual encoder, to extract useful feature representations. We follow prior work and use the pre-trained CLIP visual encoder ViT-L/14 as the base model of our tactile encoder. A projection module is present in existing work to project the encoder's output representations into embeddings with the same dimensionality as the LLM's word embeddings. This projection module is generally simple and comprises one or two trainable layers. For our projection module, we follow LLaVA's projection module and use two linear layers along with an intermediate GELU activation. Finally, the LLM forms the language understanding component of Octopi. LLM performance depends heavily on the datasets that they are pre-trained on. We use the open-source LLaMA-based LLM, Vicuna due to its dialogue capabilities. </p>
     </br>
+    </div>
+  </div>
+</section>
+
+
+<!-- Results -->
+<section class="section">
+  <div class="container is-max-widescreen">
+    <div class="rows">
       <h2 class="title is-3">Results</h2>
-      <!-- Added inline styling for width and height -->
       <img src="media/result_all.png" class="interpolation-image" style="width:60%; height:auto;" alt="Interpolate start reference image." />
     </div>
   </div>
 </section>
 
 
-
+<!-- Scenario reasoning -->
 <section class="section">
   <div class="container is-max-widescreen">
-
     <div class="rows">
       <h2 class="title is-3 centered-text">Example dialogue with users</h2>
       <p class="centered-text">We showcase two different dialogue scenarios that Octopi is capable of. First being food state reasoning, and second being objet part reasoning. </p>
               <img src="media/food.png" class="interpolation-image" style="width:80%; height:auto;" alt="Interpolate start reference image." />
-
           </br> 
                     <img src="media/par.png" class="interpolation-image" style="width:80%; height:auto;" alt="Interpolate start reference image." />
-
-          </br> 
-            
-          
+          </br>
         <br/>
-
-      
-
-      
-
     </div>
-
   </div>
-
 </section>
 
-<!-- <section class="section" id="BibTeX">
+
+<!-- Citation
+<section class="section" id="BibTeX">
   <div class="container is-max-widescreen content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@article{wang2023newton,
@@ -242,7 +240,7 @@
       <div class="column">
         <div class="content has-text-centered">
           <p>
-            This website template borrowed from NeRFies made by the amazing Keunhong Park.
+            This website template is borrowed from Nerfies made by the amazing Keunhong Park.
           </p>
         </div>
       </div>
