@@ -81,8 +81,6 @@
 <!-- Summary and video -->
 <section class="hero teaser">
   <div class="container is-fullhd">
-    <!-- <div class="hero-body"> -->
-      <!-- <div class="container"> -->
         <h2 class="subtitle has-text-centered">
           <b>Summary</b>: LLM physical property prediction and scenario reasoning with GelSight tactile videos.
         </h2>
@@ -92,8 +90,6 @@
           <img src="media/robot.gif" class="robot-demo" alt="Robot demonstration." width="640" height="360" />
 
         </div>
-      <!-- </div> -->
-    <!-- </div> -->
     <br/>
   </div>
 </section>
@@ -123,7 +119,8 @@
 
 <!-- PhysiCLeAR -->
 <section class="section">
-    <div class="container is-max-desktop">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
       <h3 class="title is-4">PhysiCLeAR Dataset</h3>
       <p>
         To facilitate the grounding of our physical reasoning on tactile inputs, we collected a tactile dataset of 74 everyday objects, totalling 408 tactile videos. These objects were selected to span across our three selected properties, with variations across object types and materials.
@@ -170,18 +167,21 @@
           <img src="media/tsa_lock_numbers.jpg" id="blueshirt" style="height:100%;" alt="Marker">
         </div>
       </div>
+    </div>
   </div>
 </section>
 
 
 <!-- Octopi -->
-<section>
-  <div class="rows is-centered">
-    <div class="row is-full-width centered-container">
-      <h2 class="title is-3"><span class="dperact">Octopi</span></h2>
-      <img src="media/model.png" class="interpolation-image" alt="Interpolate start reference image." />
-      <p> The Octopi framework comprises three trained components: 1) tactile input encoder, 2) projection module, and 3) LLM, following prior LVLM work that take videos as inputs. Firstly, prior LVLM work leverage the strengths of powerful pre-trained vision models, specifically CLIP's visual encoder, to extract useful feature representations. We follow prior work and use the pre-trained CLIP visual encoder ViT-L/14 as the base model of our tactile encoder. A projection module is present in existing work to project the encoder's output representations into embeddings with the same dimensionality as the LLM's word embeddings. This projection module is generally simple and comprises one or two trainable layers. For our projection module, we follow LLaVA's projection module and use two linear layers along with an intermediate GELU activation. Finally, the LLM forms the language understanding component of Octopi. LLM performance depends heavily on the datasets that they are pre-trained on. We use the open-source LLaMA-based LLM, Vicuna due to its dialogue capabilities. </p>
-    </br>
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="rows is-centered">
+      <div class="row is-full-width centered-container">
+        <h2 class="title is-3"><span class="dperact">Octopi</span></h2>
+        <img src="media/model.png" class="interpolation-image" alt="Interpolate start reference image." />
+        <p> The Octopi framework comprises three trained components: 1) tactile input encoder, 2) projection module, and 3) LLM, following prior LVLM work that take videos as inputs. Firstly, prior LVLM work leverage the strengths of powerful pre-trained vision models, specifically CLIP's visual encoder, to extract useful feature representations. We follow prior work and use the pre-trained CLIP visual encoder ViT-L/14 as the base model of our tactile encoder. A projection module is present in existing work to project the encoder's output representations into embeddings with the same dimensionality as the LLM's word embeddings. This projection module is generally simple and comprises one or two trainable layers. For our projection module, we follow LLaVA's projection module and use two linear layers along with an intermediate GELU activation. Finally, the LLM forms the language understanding component of Octopi. LLM performance depends heavily on the datasets that they are pre-trained on. We use the open-source LLaMA-based LLM, Vicuna due to its dialogue capabilities. </p>
+      </br>
+      </div>
     </div>
   </div>
 </section>
