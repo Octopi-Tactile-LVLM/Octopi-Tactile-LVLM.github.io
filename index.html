@@ -276,7 +276,7 @@
         </div>
         <div class="content has-text-justified">
           <p>
-            Octopi-7b and Octopi-13b perform above the random baseline for object property predictions and have similar performance to Fine-tuned CLIP + Classification, indicating that Octopi can be used for object property prediction. Octopi-13b has a higher combined accuracy (i.e. all three physical properties are correctly predicted for a given object) when compared to Octopi-7b, suggesting there are performance gains with larger LLMs for tactile signal grounding.
+            Octopi-7b and Octopi-13b perform above the random baseline for object property predictions and have similar performance to Fine-tuned CLIP + Classification, indicating that <b>Octopi can be used for object property prediction</b>. Octopi-13b has a higher combined accuracy (i.e. all three physical properties are correctly predicted for a given object) when compared to Octopi-7b, suggesting there are performance gains with larger LLMs for tactile signal grounding.
           </p>
         </div>
         <div>
@@ -290,7 +290,8 @@
         </div>
         <div class="content has-text-justified">
           <p>
-            
+            During scenario reasoning, we do not provide ground-truth property descriptions. Our experiments show Octopi-7b and Octopi-13b perform above the random baseline, indicating that <b>Octopi can be used for scenario reasoning</b>. Furthermore, leveraging object properties (i.e. Object Property Description) significantly improves scenario reasoning for Octopi, which supports our overall
+            hypothesis that leveraging these properties is helpful for these tasks. Interestingly, we observe that the 7b model marginally outperformed the 13b model. More details about the scenarios can be found in our paper.
           </p>
         </div>
         <div>
@@ -307,6 +308,9 @@
         </div>
         <div class="columns is-vcentered is-centered">
           <div style="width:50%; float: left;">
+            <div class="columns is-centered has-text-centered">
+              <h4 class="title is-4">Scenario Reasoning</h4>
+            </div>
             <img src="media/scenario_reasoning/food_state_reasoning.png" class="interpolation-image" style="width:100%; height:auto;" alt="Rice reasoning interaction." />
           </div>
           <div style="width:50%; float: right;">
