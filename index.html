@@ -276,7 +276,7 @@
         </div>
         <div class="content has-text-justified">
           <p>
-            <!-- FT CLIP is the combination of the fine-tuned CLIP visual encoder and the three separate trained classification layers. \method-7b and \method-13b perform above the random baseline for object property predictions and have similar performance to the fine-tuned CLIP. \method-13b performs better than \method-7b on the prediction task. -->
+            Octopi-7b and Octopi-13b perform above the random baseline for object property predictions and have similar performance to Fine-tuned CLIP + Classification, indicating that OCTOPI can be used for object property prediction. Octopi-13b has a higher combined accuracy (i.e. all three physical properties are correctly predicted for a given object) when compared to Octopi-7b, suggesting there are performance gains with larger LLMs for tactile signal grounding.
           </p>
         </div>
         <div>
@@ -307,10 +307,10 @@
         </div>
         <div class="columns is-vcentered is-centered">
           <div style="width:50%; float: left;">
-            <img src="media/scenario_reasoning/rice.png" class="interpolation-image" style="width:100%; height:auto;" alt="Rice reasoning interaction." />
+            <img src="media/scenario_reasoning/food_state_reasoning.png" class="interpolation-image" style="width:100%; height:auto;" alt="Rice reasoning interaction." />
           </div>
           <div style="width:50%; float: right;">
-            <img src="media/scenario_reasoning/part.png" class="interpolation-image" style="width:100%; height:auto;" alt="Toothbrush part reasoning interaction." />
+            <img src="media/scenario_reasoning/object_part_reasoning.png" class="interpolation-image" style="width:100%; height:auto;" alt="Toothbrush part reasoning interaction." />
           </div>
         </div>
       </div>
