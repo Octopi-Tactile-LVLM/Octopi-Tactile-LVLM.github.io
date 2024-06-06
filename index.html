@@ -254,7 +254,7 @@
             <!-- <p> Octopi comprises three trained components: 1) tactile input encoder, 2) projection module, and 3) LLM, similar to prior LVLM models. We use the CLIP (ViT-L/14) visual encoder to extract feature representations from input tactile videos. The encoder's output is then mapped to the LLM's word embedding space using a projection module (two linear layers). Finally, the LLM forms the language understanding component of Octopi. We use the open-source LLaMA-based LLM, Vicuna v1.5, recognized for its dialogue capabilities. Language embeddings are derived through tokenization and then Vicuna's word embedding layer, with <code>&lt;tact_start&gt;</code> and <code>&lt;tact_end&gt;</code> being newly trained word embeddings indicating the start and end of a tactile frame sequence from a single tactile sensor.</p> -->
           </div>
           <div class="columns is-vcentered is-centered">
-            <img src="media/model.png" class="interpolation-image" alt="Model diagram." width="800" height="450" />
+            <img src="media/training.png" class="interpolation-image" alt="Model diagram." width="800" height="450" />
           </div>
         </div>
       </div>
@@ -276,7 +276,7 @@
         </div>
         <div class="content has-text-justified">
           <p>
-            Octopi-7b and Octopi-13b perform above the random baseline for object property predictions and have similar performance to Fine-tuned CLIP + Classification, indicating that OCTOPI can be used for object property prediction. Octopi-13b has a higher combined accuracy (i.e. all three physical properties are correctly predicted for a given object) when compared to Octopi-7b, suggesting there are performance gains with larger LLMs for tactile signal grounding.
+            Octopi-7b and Octopi-13b perform above the random baseline for object property predictions and have similar performance to Fine-tuned CLIP + Classification, indicating that Octopi can be used for object property prediction. Octopi-13b has a higher combined accuracy (i.e. all three physical properties are correctly predicted for a given object) when compared to Octopi-7b, suggesting there are performance gains with larger LLMs for tactile signal grounding.
           </p>
         </div>
         <div>
